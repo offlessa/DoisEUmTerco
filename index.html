@@ -1,98 +1,134 @@
+<!--PARTE PRONTA-->
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Loja de Terços</title>
-</head>
-<body>
-    <header>
-        <div class="logo-container">
-            <img src="logo.png" alt="Logo" />
-            <h1>Loja de Terços</h1>
-        </div>
-        <div class="search-container">
-            <input id="search" type="text" name="q" placeholder="O que você procura?" class="input-text">
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>DoisEUmTerço</title>
+  </head>
+  <!--PARTE PRONTA-->
+
+  <body>
+    <!-- INÍCIO CABEÇALHO 1-->
+    <div>
+      <header>
+        <p style="font-size: 13px; padding-left: 110px">
+          Entrar ou Cadastre-se
+        </p>
         <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Coleções</a></li>
-                <li><a href="#">Sobre Nós</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Coleções</a></li>
+            <li><a href="#">Sobre Nós</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
         </nav>
-    </header>
-    
+      </header>
+    </div>
+    <!--FIM CABEÇALHO 1-->
+
+    <!--INÍCIO ENTRE CABEÇALHOS-->
+    <div class="logo-container">
+      <img
+        src="308564568_589266106224997_3421040772360286219_n-removebg-preview.png"
+        alt="Logo"
+      />
+    </div>
+    <div class="search-container">
+      <input
+        id="search"
+        type="text"
+        name="q"
+        placeholder="O que você procura?"
+        class="input-text"
+      />
+    </div>
+    <!--FIM ENTRE CABEÇALHOS-->
+
+    <!--INÍCIO CABEÇALHO 2-->
+    <div class="header2">
+      <header></header>
+    </div>
+    <!--FIM CABEÇALHO 2-->
+
+    <!--INÍCIO PARTE LATERAL ESQUERDA-->
     <main>
-        <div class="container">
-            <aside class="sidebar">
-                <h2>Categorias</h2>
-                <ul>
-                    <li><a href="#">Terços de Madeira</a></li>
-                    <li><a href="#">Terços de Cristal</a></li>
-                    <li><a href="#">Terços de Pérolas</a></li>
-                    <li><a href="#">Terços de Couro</a></li>
-                </ul>
-                <h2>Filtros</h2>
-                <div class="filter">
-                    <h3>Cores</h3>
-                    <label><input type="checkbox"> Dourado</label><br>
-                    <label><input type="checkbox"> Prata</label><br>
-                    <label><input type="checkbox"> Preto</label><br>
-                    <label><input type="checkbox"> Branco</label><br>
-                </div>
-                <div class="filter">
-                    <h3>Preço</h3>
-                    <label><input type="checkbox"> Até R$ 50</label><br>
-                    <label><input type="checkbox"> R$ 51 - R$ 100</label><br>
-                    <label><input type="checkbox"> Acima de R$ 100</label><br>
-                </div>
-            </aside>
+      <div class="container">
+        <aside class="sidebar">
+          <h2>Categorias</h2>
+          <ul>
+            <li><a href="#">Terços de Madeira</a></li>
+            <li><a href="#">Terços de Cristal</a></li>
+            <li><a href="#">Terços de Pérolas</a></li>
+            <li><a href="#">Terços de Couro</a></li>
+          </ul>
+          <h2>Filtros</h2>
+          <div class="filter">
+            <h3>Cores</h3>
+            <label><input type="checkbox" /> Dourado</label><br />
+            <label><input type="checkbox" /> Prata</label><br />
+            <label><input type="checkbox" /> Preto</label><br />
+            <label><input type="checkbox" /> Branco</label><br />
+          </div>
+          <div class="filter">
+            <h3>Preço</h3>
+            <label><input type="checkbox" /> Até R$ 50</label><br />
+            <label><input type="checkbox" /> R$ 51 - R$ 100</label><br />
+            <label><input type="checkbox" /> Acima de R$ 100</label><br />
+          </div>
+        </aside>
+        <!--FIM PARTE LATERAL ESQUERDA-->
 
-            <section class="loja">
-                <div class="banner">
-                    <img src="banner.jpg" alt="Promoção">
-                </div>
+        <!--INÍCIO BANNER-->
+        <section class="loja">
+          <div class="banner">
+            <img src="banner.jpg" alt="Promoção" />
+          </div>
+          <!--FIM BANNER-->
 
-                <h2>Produtos em Destaque</h2>
-                <div class="produtos">
-                    <div class="produto">
-                        <img src="terco1.jpg" alt="Terço de Madeira">
-                        <h3>Terço de Madeira</h3>
-                        <p>Terço feito de madeira natural, ideal para orações.</p>
-                        <p class="preco">R$ 49,90</p>
-                        <button>Adicionar ao Carrinho</button>
-                    </div>
-                    <div class="produto">
-                        <img src="terco2.jpg" alt="Terço de Cristal">
-                        <h3>Terço de Cristal</h3>
-                        <p>Terço de cristal com acabamento elegante.</p>
-                        <p class="preco">R$ 79,90</p>
-                        <button>Adicionar ao Carrinho</button>
-                    </div>
-                    <div class="produto">
-                        <img src="terco3.jpg" alt="Terço de Pérolas">
-                        <h3>Terço de Pérolas</h3>
-                        <p>Terço de pérolas, perfeito para ocasiões especiais.</p>
-                        <p class="preco">R$ 99,90</p>
-                        <button>Adicionar ao Carrinho</button>
-                    </div>
-                    <div class="produto">
-                        <img src="terco4.jpg" alt="Terço de Couro">
-                        <h3>Terço de Couro</h3>
-                        <p>Terço de couro, robusto e durável.</p>
-                        <p class="preco">R$ 59,90</p>
-                        <button>Adicionar ao Carrinho</button>
-                    </div>
-                </div>
-            </section>
-        </div>
+          <!--INÍCIO PRODUTOS-->
+
+          <h2>Produtos em Destaque</h2>
+          <div class="produtos">
+            <div class="produto">
+              <img src="terco1.jpg" alt="Terço de Madeira" />
+              <h3>Terço de Madeira</h3>
+              <p>Terço feito de madeira natural, ideal para orações.</p>
+              <p class="preco">R$ 49,90</p>
+              <button>Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+              <img src="terco2.jpg" alt="Terço de Cristal" />
+              <h3>Terço de Cristal</h3>
+              <p>Terço de cristal com acabamento elegante.</p>
+              <p class="preco">R$ 79,90</p>
+              <button>Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+              <img src="terco3.jpg" alt="Terço de Pérolas" />
+              <h3>Terço de Pérolas</h3>
+              <p>Terço de pérolas, perfeito para ocasiões especiais.</p>
+              <p class="preco">R$ 99,90</p>
+              <button>Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+              <img src="terco4.jpg" alt="Terço de Couro" />
+              <h3>Terço de Couro</h3>
+              <p>Terço de couro, robusto e durável.</p>
+              <p class="preco">R$ 59,90</p>
+              <button>Adicionar ao Carrinho</button>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
-    
+    <!--FIM PRODUTO-->
+
+    <!--INÍCIO CABEÇALHO FINAL-->
     <footer>
-        <p>&copy; 2024 Loja de Terços. Todos os direitos reservados.</p>
+      <p>&copy; 2024 Loja de Terços. Todos os direitos reservados.</p>
     </footer>
-</body>
+    <!--FIM CABEÇALHO FINAL-->
+  </body>
 </html>
