@@ -13,24 +13,32 @@ header {
   height: 41px; /* Define a altura do cabeçalho */
 } /*CABEÇALHO 1*/
 
+.header-container {
+  display: flex; /* Coloca o logotipo e a barra de pesquisa lado a lado */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Alinha verticalmente os itens */
+  margin: 0px 0; /* Margem em cima e embaixo do header */
+  margin-bottom: 70px;
+  margin-right: 437px;
+}
+
 .logo-container {
-  display: flex; /* Permite que o logo e seus itens sejam flexíveis */
+  display: flex; /* Permite que o logotipo seja flexível */
   align-items: center; /* Alinha o logo verticalmente no centro */
-} /* LOGOTIPO */
+  margin-right: 150px; /* Adiciona espaço entre o logo e a barra de pesquisa */
+}
 
 .logo-container img {
-  height: 100px; /* Define a altura da imagem do logotipo */
-  width: 100px; /* Define a largura da imagem do logotipo */
-  margin-left: 100px; /* Adiciona uma margem à esquerda da imagem */
-} /* LOGOTIPO - Tamanho da imagem do logotipo e margem direita */
+  height: 100px;
+  width: 100px;
+}
 
 .search-container {
-  text-align: center; /* Centraliza o texto dentro da barra de pesquisa */
-  display: flex; /* Define como um contêiner flexível */
-  justify-content: center; /* Centraliza a barra de pesquisa */
-  align-items: center; /* Alinha os itens verticalmente no centro */
-  margin-bottom: 20px; /* Adiciona margem abaixo da barra de pesquisa */
-} /* BARRA DE PESQUISA - Centraliza e alinha a barra de pesquisa */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona sombra à barra de pesquisa */
+}
 
 .header2 {
   background-color: #d4af37; /* Define a cor de fundo do segundo cabeçalho */
