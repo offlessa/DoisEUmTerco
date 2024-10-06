@@ -79,15 +79,55 @@ header {
   background-color: #d4af37; /* Define a cor de fundo do segundo cabeçalho */
   color: white; /* Define a cor do texto no segundo cabeçalho */
   padding: 5px; /* Adiciona espaço interno ao cabeçalho */
+  padding-left: 90px;
   display: flex; /* Define como um contêiner flexível */
   justify-content: space-between; /* Distribui os itens com espaço igual entre eles */
   align-items: center; /* Alinha verticalmente os itens no centro */
   margin-top: -65px; /* Diminui o espaço entre os cabeçalhos */
 } /* CABEÇALHO 2 */
 
-.header2 nav ul li a {
-  font-size: 16px;
-  padding-left: 40px;
+/* Estilo básico do menu */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  color: #000;
+}
+
+/* Estilo do submenu */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.submenu li a {
+  padding: 10px;
+  color: #000;
+  display: block;
+  white-space: nowrap;
+}
+
+/* Mostrar o submenu ao passar o mouse */
+nav ul li:hover .submenu {
+  display: block;
 }
 .input-text {
   padding: 10px; /* Adiciona preenchimento interno ao campo de entrada */
@@ -129,7 +169,7 @@ nav ul li a {
 } /* BARRA LATERAL - Define a largura e estilo da barra lateral com sombra */
 
 .sidebar h2 {
-  color: #d4af37; /* Define a cor dos títulos da barra lateral como dourada */
+  color: #4a3622; /* Define a cor dos títulos da barra lateral como dourada */
 } /* TÍTULOS BARRA LATERAL ESQUERDA - Cor dourada para os títulos */
 
 .sidebar ul {
@@ -164,19 +204,16 @@ nav ul li a {
 
 .banner {
   margin-bottom: 20px; /* Adiciona margem abaixo do banner */
-} /* BANNER - Margem inferior do banner */
+  overflow: hidden; /* Esconde partes da imagem que ultrapassam a área definida */
+}
 
 .banner img {
-  width: 100%; /* Define a largura da imagem do banner */
-  height: auto; /* Mantém a proporção da imagem */
-  border-radius: 10px; /* Arredonda as bordas da imagem do banner */
-} /* BANNER - Define o tamanho da imagem do banner e bordas arredondadas */
-
-.produtos {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-} /*PRODUTOS - Exibe os produtos em uma grade responsiva*/
+  width: 1150px; /* Ajusta a largura para preencher o contêiner pai */
+  border-radius: 8px;
+  height: 100px; /* Mantém a proporção da imagem */
+  max-height: 400px; /* Aumenta a altura máxima do banner para ocupar mais espaço verticalmente */
+  object-fit: cover; /* Cobre a área do banner sem distorcer a imagem */
+}
 
 .produtos {
   display: grid; /* Define o layout como grade */
@@ -185,16 +222,20 @@ nav ul li a {
     minmax(250px, 1fr)
   ); /* Define as colunas da grade */
   gap: 20px; /* Define o espaço entre os itens da grade */
-} /* PRODUTOS - Exibe os produtos em uma grade responsiva */
+  justify-content: center; /* Centraliza os itens da grade horizontalmente */
+  padding: 20px; /* Adiciona um pouco de preenchimento ao redor da grade */
+  margin: 0 auto; /* Centraliza a grade na página */
+} /* PRODUTOS - Exibe os produtos em uma grade responsiva e centralizada */
 
 .produto {
   background-color: white; /* Define a cor de fundo dos produtos */
-  border: 1px solid #d3dade; /* Define a borda dos produtos */
+  border: none; /* Remove a borda dos produtos */
   border-radius: 10px; /* Arredonda as bordas dos cartões de produtos */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra aos cartões de produtos */
-  padding: 70px; /* Adiciona preenchimento interno ao cartão do produto */
+  padding: 20px; /* Adiciona preenchimento interno ao cartão do produto */
   text-align: center; /* Centraliza o texto dentro do cartão */
   transition: transform 0.2s; /* Define uma transição suave para transformações */
+  width: 210px; /* Define uma largura fixa para os cartões dos produtos */
 } /* CARTÃO PRODUTO - Estilo dos cartões dos produtos com sombra e borda */
 
 .produto:hover {
@@ -202,10 +243,11 @@ nav ul li a {
 } /* CARTÃO PRODUTO HOVER - Aumenta ligeiramente o tamanho ao passar o mouse */
 
 .produto img {
-  width: 100%; /* Define a largura da imagem do produto */
-  height: auto; /* Mantém a proporção da imagem do produto */
+  width: 200px; /* Define a largura da imagem do produto para preencher o cartão */
+  height: 200px; /* Define a altura fixa da imagem do produto */
   border-radius: 5px; /* Arredonda as bordas da imagem do produto */
-} /* IMAGEM PRODUTO - Tamanho da imagem do produto e bordas arredondadas */
+  object-fit: cover; /* Cobre a área da imagem sem distorcer */
+} /* IMAGEM PRODUTO - Tamanho fixo da imagem do produto com bordas arredondadas */
 
 .produto h3 {
   margin: 10px 0; /* Define a margem do título do produto */
@@ -224,7 +266,6 @@ nav ul li a {
 
 button {
   background-color: #d4af37; /* Define a cor de fundo dos botões como dourada */
-
   color: white; /* Define a cor do texto dos botões como branca */
   border: none; /* Remove a borda padrão do botão */
   padding: 10px 15px; /* Adiciona preenchimento interno ao botão */
