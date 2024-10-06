@@ -17,14 +17,14 @@ header {
 
 .header-container {
   display: flex; /* Coloca o logotipo e a barra de pesquisa lado a lado */
-  justify-content: center; /* Centraliza o conteúdo horizontalmente */
   align-items: center; /* Alinha verticalmente os itens */
   margin: 0px 0; /* Margem em cima e embaixo do header */
   margin-bottom: 70px;
-  margin-right: 437px;
+  padding-right: 20px; /* Adiciona preenchimento à direita para evitar que o conteúdo fique colado na borda */
 }
 
 .logo-container {
+  margin-left: 110px;
   display: flex; /* Permite que o logotipo seja flexível */
   align-items: center; /* Alinha o logo verticalmente no centro */
   margin-right: 150px; /* Adiciona espaço entre o logo e a barra de pesquisa */
@@ -36,6 +36,7 @@ header {
 }
 
 .search-container {
+  margin-left: 10px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -73,6 +74,37 @@ header {
   height: 100%;
   border-radius: 8px;
   object-fit: contain; /* Mantém a proporção da imagem */
+}
+
+.account-container {
+  display: flex; /* Usa flexbox para alinhar os itens */
+  align-items: center; /* Alinha verticalmente os itens no centro */
+  margin-left: 80px; /* Move o container para a direita */
+}
+
+.account,
+.cart {
+  display: flex; /* Usa flexbox para alinhar ícones e texto */
+  align-items: center; /* Alinha verticalmente os itens no centro */
+  margin-left: 20px; /* Espaço entre os itens */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+.account:hover,
+.cart:hover {
+  color: #d4af37; /* Muda a cor do texto para dourada ao passar o mouse */
+}
+
+.icon {
+  width: 40px; /* Define uma largura padrão para os ícones */
+  height: 20px; /* Define uma altura padrão para os ícones */
+  margin-right: 5px; /* Espaço entre o ícone e o texto */
+}
+
+.account:hover .icon,
+.cart:hover .icon {
+  filter: brightness(0) saturate(100%) invert(59%) sepia(73%) saturate(419%)
+    hue-rotate(354deg) brightness(91%) contrast(93%); /* Muda a cor do ícone para dourada ao passar o mouse */
 }
 
 .header2 {
@@ -214,6 +246,60 @@ nav ul li a {
   max-height: 400px; /* Aumenta a altura máxima do banner para ocupar mais espaço verticalmente */
   object-fit: cover; /* Cobre a área do banner sem distorcer a imagem */
 }
+.ordenar-por {
+  display: flex;
+  justify-content: flex-end; /* Alinha o seletor à direita */
+  margin: 5px 33px 5px 0; /* Define uma margem para alinhar ao conteúdo dos produtos */
+  align-items: center;
+}
+.ordenar-por h2 {
+  margin: 0; /* Remove a margem padrão */
+  color: #4a3622; /* Cor dourada para o título */
+  font-size: 24px; /* Tamanho da fonte do título */
+  margin-right: 645px; /* Adiciona um espaço entre o título e o seletor */
+}
+.ordenar-por label {
+  font-size: 16px; /* Aumenta o tamanho da fonte */
+  margin-right: 10px;
+  color: #333;
+}
+
+.ordenar-por select {
+  padding: 5px 5px; /* Aumenta o preenchimento interno */
+  font-size: 13px; /* Aumenta o tamanho da fonte */
+  border-radius: 5px;
+  border: 1px solid #d4af37; /* Borda dourada */
+  color: #555;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative; /* Mantém o contêiner posicionado corretamente */
+  box-shadow: 0 0 4px rgba(212, 175, 55, 0.5);
+  outline: none;
+}
+
+.scroll-top {
+  position: fixed; /* Fixa a posição da seta na página */
+  bottom: 20px; /* Afasta do rodapé */
+  right: 20px; /* Afasta da borda direita */
+  background-color: #d4af37; /* Fundo dourado */
+  color: white; /* Cor do ícone */
+  padding: 10px 15px;
+  border-radius: 50%; /* Arredonda o botão */
+  cursor: pointer; /* Mostra o cursor de mão ao passar */
+  box-shadow: 0 0 4px rgba(212, 175, 55, 0.5); /* Brilho sutil */
+  text-align: center;
+  font-size: 24px; /* Tamanho da seta */
+  transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+.scroll-top:hover {
+  background-color: #cda03b; /* Cor ao passar o mouse */
+}
+
+.scroll-top a {
+  color: white; /* Cor da seta */
+  text-decoration: none; /* Remove o sublinhado */
+}
 
 .produtos {
   display: grid; /* Define o layout como grade */
@@ -245,7 +331,6 @@ nav ul li a {
 .produto img {
   width: 200px; /* Define a largura da imagem do produto para preencher o cartão */
   height: 200px; /* Define a altura fixa da imagem do produto */
-  border-radius: 5px; /* Arredonda as bordas da imagem do produto */
   object-fit: cover; /* Cobre a área da imagem sem distorcer */
 } /* IMAGEM PRODUTO - Tamanho fixo da imagem do produto com bordas arredondadas */
 
