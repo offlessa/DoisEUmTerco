@@ -13,15 +13,23 @@
     <!-- INÍCIO CABEÇALHO 1-->
     <div>
       <header>
-        <p style="font-size: 13px; padding-left: 100px">
-          Entrar ou Cadastre-se
-        </p>
+        <a
+          href="login.html"
+          style="
+            font-size: 13px;
+            padding-left: 90px;
+            text-decoration: none;
+            color: inherit;
+          "
+          >Entrar ou Cadastre-se</a
+        >
+
         <nav>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Coleções</a></li>
-            <li><a href="#">Sobre Nós</a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="colecoes.html">Coleções</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li><a href="contato.html">Contato</a></li>
           </ul>
         </nav>
       </header>
@@ -59,10 +67,38 @@
       <header>
         <nav>
           <ul>
-            <li><a href="#">Terços de parede</a></li>
-            <li><a href="#">Terços de noiva</a></li>
-            <li><a href="#">Peças</a></li>
-            <li><a href="#">Pingentes</a></li>
+            <li>
+              <a href="#">Terços de parede</a>
+              <ul class="submenu">
+                <li><a href="destaque-tercos-parede.html">Destaques</a></li>
+                <li><a href="categorias-tercos-parede.html">Categorias</a></li>
+                <li><a href="novidades-tercos-parede.html">Novidades</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Terços de noiva</a>
+              <ul class="submenu">
+                <li><a href="destaque-tercos-noiva.html">Destaques</a></li>
+                <li><a href="categorias-tercos-noiva.html">Categorias</a></li>
+                <li><a href="novidades-tercos-noiva.html">Novidades</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Peças</a>
+              <ul class="submenu">
+                <li><a href="destaque-pecas.html">Destaques</a></li>
+                <li><a href="categorias-pecas.html">Categorias</a></li>
+                <li><a href="novidades-pecas.html">Novidades</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Pingentes</a>
+              <ul class="submenu">
+                <li><a href="destaque-pingentes.html">Destaques</a></li>
+                <li><a href="categorias-pingentes.html">Categorias</a></li>
+                <li><a href="novidades-pingentes.html">Novidades</a></li>
+              </ul>
+            </li>
           </ul>
         </nav>
       </header>
@@ -82,14 +118,14 @@
           </ul>
           <h2>Filtros</h2>
           <div class="filter">
-            <h3>Cores</h3>
+            <h3 style="color: #d4af37">Cores</h3>
             <label><input type="checkbox" /> Dourado</label><br />
             <label><input type="checkbox" /> Prata</label><br />
             <label><input type="checkbox" /> Preto</label><br />
             <label><input type="checkbox" /> Branco</label><br />
           </div>
           <div class="filter">
-            <h3>Preço</h3>
+            <h3 style="color: #d4af37">Preço</h3>
             <label><input type="checkbox" /> Até R$ 50</label><br />
             <label><input type="checkbox" /> R$ 51 - R$ 100</label><br />
             <label><input type="checkbox" /> Acima de R$ 100</label><br />
@@ -100,37 +136,39 @@
         <!--INÍCIO BANNER-->
         <section class="loja">
           <div class="banner">
-            <img src="banner.jpg" alt="Promoção" />
+            <img src="Nossos Produtos cor.jpg" alt="Promoção" />
           </div>
           <!--FIM BANNER-->
 
           <!--INÍCIO PRODUTOS-->
 
-          <h2>Produtos em Destaque</h2>
           <div class="produtos">
             <div class="produto">
-              <img src="terco1.jpg" alt="Terço de Madeira" />
+              <img
+                src="96872663_2506590656108276_599672735550930944_n.jpg"
+                alt="Terço de Madeira"
+              />
               <h3>Terço de Madeira</h3>
               <p>Terço feito de madeira natural, ideal para orações.</p>
               <p class="preco">R$ 49,90</p>
               <button>Adicionar ao Carrinho</button>
             </div>
             <div class="produto">
-              <img src="terco2.jpg" alt="Terço de Cristal" />
+              <img src="30_04_2022 17_54_16.jpg" alt="Terço de Cristal" />
               <h3>Terço de Cristal</h3>
               <p>Terço de cristal com acabamento elegante.</p>
               <p class="preco">R$ 79,90</p>
               <button>Adicionar ao Carrinho</button>
             </div>
             <div class="produto">
-              <img src="terco3.jpg" alt="Terço de Pérolas" />
+              <img src="30_04_2022 17_50_25.jpg" alt="Terço de Pérolas" />
               <h3>Terço de Pérolas</h3>
               <p>Terço de pérolas, perfeito para ocasiões especiais.</p>
               <p class="preco">R$ 99,90</p>
               <button>Adicionar ao Carrinho</button>
             </div>
             <div class="produto">
-              <img src="terco4.jpg" alt="Terço de Couro" />
+              <img src="30_04_2022 17_48_57.jpg" alt="Terço de Couro" />
               <h3>Terço de Couro</h3>
               <p>Terço de couro, robusto e durável.</p>
               <p class="preco">R$ 59,90</p>
@@ -144,7 +182,7 @@
 
     <!--INÍCIO CABEÇALHO FINAL-->
     <footer>
-      <p>&copy; 2024 Loja de Terços. Todos os direitos reservados.</p>
+      <p>&copy; 2024 DoiseUmTerço. Todos os direitos reservados.</p>
     </footer>
     <!--FIM CABEÇALHO FINAL-->
   </body>
