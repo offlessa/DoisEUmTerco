@@ -122,23 +122,45 @@
     </div>
     <!--FIM CABEÇALHO 2-->
     <!-- INÍCIO FORMULÁRIO -->
-    <div class="form-container">
-      <h2>Cadastre-se</h2>
-      <form action="submit_form.html" method="POST">
-        <label for="name">Nome:</label>
-        <input type="text" id="name" name="name" required />
+    <div class="registration-container">
+      <h2>Criar Nova Conta</h2>
+      <form action="#" method="POST">
+        <div class="form-group">
+          <label for="first-name">Nome:</label>
+          <input type="text" id="first-name" name="first-name" required />
+        </div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
+        <div class="form-group">
+          <label for="last-name">Sobrenome:</label>
+          <input type="text" id="last-name" name="last-name" required />
+        </div>
 
-        <label for="password">Senha:</label>
-        <input type="password" id="password" name="password" required />
+        <div class="form-group">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
 
-        <button type="submit">Cadastrar</button>
+        <div class="form-group">
+          <label for="password">Senha:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+
+        <div class="form-group">
+          <label for="confirm-password">Confirme sua Senha:</label>
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            required
+          />
+        </div>
+
+        <button type="submit">Criar Conta</button>
       </form>
 
-      <p>Já tem login? <a href="login.html">Clique aqui</a></p>
+      <p>Já tem uma conta? <a href="login.html">Clique aqui para entrar</a></p>
     </div>
+
     <!-- FIM FORMULÁRIO -->
   </body>
 </html>
