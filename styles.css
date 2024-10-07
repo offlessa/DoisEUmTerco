@@ -33,6 +33,10 @@ header {
 .logo-container img {
   height: 100px;
   width: 100px;
+  transition: transform 0.3s;
+}
+.logo-container img:hover {
+  transform: scale(1.1); /* Aumenta a escala da logo ao passar o mouse */
 }
 
 .search-container {
@@ -219,8 +223,11 @@ nav ul li a {
 } /* LISTA BARRA LATERAL ESQUERDA - Cor e estilo dos links */
 
 .sidebar ul li a:hover {
-  color: #d4af37; /* Muda a cor do link ao passar o mouse */
-} /* LISTA BARRA LATERAL ESQUERDA - Muda a cor ao passar o mouse nos links */
+  border-radius: 8px;
+  background-color: #d4af37; /* Fundo dourado ao passar o mouse */
+  color: white; /* Texto branco */
+  padding: 5px; /* Um pouco de preenchimento para melhorar a aparência */
+}
 
 .filter {
   margin-top: 20px; /* Adiciona margem superior aos filtros na barra lateral */
@@ -363,9 +370,47 @@ button:hover {
   background-color: #cda03b; /* Muda a cor de fundo do botão ao passar o mouse */
 } /* BOTÕES HOVER - Muda a cor do botão ao passar o mouse */
 
+/*footer*/
 footer {
-  text-align: center; /* Centraliza o texto do rodapé */
-  padding: 15px 0; /* Adiciona preenchimento vertical ao rodapé */
-  background-color: #d4af37; /* Define a cor de fundo do rodapé como dourada */
-  color: white; /* Define a cor do texto do rodapé como branca */
-} /* RODAPÉ - Estilo do rodapé com cor dourada e texto centralizado */
+  background-color: #cda03b;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.social-media li {
+  display: flex;
+  align-items: center;
+}
+
+.social-media a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-media img {
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+}
+
+.footer-bottom {
+  margin-top: 10px;
+}
