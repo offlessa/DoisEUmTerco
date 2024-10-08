@@ -93,6 +93,17 @@ header {
   margin-left: 20px; /* Espaço entre os itens */
   cursor: pointer; /* Muda o cursor para indicar que é clicável */
 }
+.cart-link {
+  text-decoration: none; /* Remove o sublinhado */
+  color: inherit; /* Mantém a cor original do texto */
+}
+
+.cart-link:visited,
+.cart-link:link,
+.cart-link:active {
+  color: inherit; /* Remove a cor azul dos links */
+  text-decoration: none; /* Garante que não tenha sublinhado */
+}
 
 .account:hover,
 .cart:hover {
@@ -253,6 +264,7 @@ nav ul li a {
   max-height: 400px; /* Aumenta a altura máxima do banner para ocupar mais espaço verticalmente */
   object-fit: cover; /* Cobre a área do banner sem distorcer a imagem */
 }
+
 .ordenar-por {
   display: flex;
   justify-content: flex-end; /* Alinha o seletor à direita */
