@@ -100,7 +100,7 @@ header {
 }
 
 .icon {
-  width: 40px; /* Define uma largura padrão para os ícones */
+  width: 35px; /* Define uma largura padrão para os ícones */
   height: 20px; /* Define uma altura padrão para os ícones */
   margin-right: 5px; /* Espaço entre o ícone e o texto */
 }
@@ -152,6 +152,7 @@ nav ul li a {
   margin: 0;
   list-style: none;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
 
 .submenu li a {
@@ -189,3 +190,194 @@ nav ul li a {
   text-decoration: none; /* Remove o sublinhado dos links */
   font-weight: verdana; /* Define a fonte dos links */
 } /* NAVEGAÇÃO - Estilo dos links no menu, cor branca e fonte */
+
+.carousel-container {
+  position: relative;
+  width: 1200px; /* Aumentando a largura do banner */
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  height: 400px; /* Reduzindo a altura */
+  position: relative;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.paineis {
+  display: flex;
+  width: 500%;
+  height: 100%;
+  animation: carousel 30s infinite;
+  position: relative;
+}
+
+article {
+  flex: 1;
+  height: 100%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Setas de navegação */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent; /* Sem fundo inicialmente */
+  color: #d4af37; /* Cor da seta */
+  width: 39px; /* Largura do quadrado */
+  height: 39px; /* Altura do quadrado */
+  display: flex; /* Usando flexbox para centralizar o conteúdo */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  cursor: pointer;
+  font-size: 30px; /* Tamanho da seta ajustado */
+  line-height: 39px; /* Define a linha de altura para centralizar verticalmente */
+  z-index: 2;
+  border: 1.8px solid #d4af37; /* Contorno da seta */
+  border-radius: 6px; /* Bordas arredondadas */
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s,
+    transform 0.3s; /* Transição suave */
+}
+
+.arrow:hover {
+  background-color: #d4af37; /* Cor dourada ao passar o mouse */
+  color: white; /* Mudança da cor da seta */
+  border-color: #d4af37; /* Muda a cor da borda para dourado */
+}
+
+.arrow.left {
+  left: -60px; /* Posição da seta à esquerda */
+}
+
+.arrow.right {
+  right: -60px; /* Posição da seta à direita */
+}
+
+/* Animação do carrossel */
+@keyframes carousel {
+  0% {
+    left: 0;
+  }
+  12.5% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  37.5% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  62.5% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  87.5% {
+    left: -300%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+input[type="checkbox"]:checked ~ .paineis {
+  animation-play-state: paused;
+  animation: go 10s;
+}
+
+@keyframes go {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -300%;
+  }
+}
+
+@keyframes back {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+.indicators {
+  position: absolute; /* Para que a posição seja relativa ao carrossel */
+  bottom: 10px; /* Ajuste a posição vertical conforme necessário */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Para centralizar completamente */
+  display: flex; /* Para alinhar as bolinhas lado a lado */
+}
+
+.indicator {
+  width: 12px; /* Largura da bolinha */
+  height: 12px; /* Altura da bolinha */
+  background-color: #d4af37; /* Cor das bolinhas */
+  border-radius: 50%; /* Faz a bolinha ser redonda */
+  margin: 0 5px; /* Espaçamento entre as bolinhas */
+  cursor: pointer; /* Muda o cursor ao passar sobre a bolinha */
+  opacity: 0.5; /* Torna as bolinhas um pouco transparentes */
+  transition: opacity 0.3s; /* Transição suave ao passar o mouse */
+}
+
+.indicator.active {
+  opacity: 1; /* Torna a bolinha ativa totalmente visível */
+}
+.assinatura {
+  text-align: center;
+  font-family: "Lucida Handwriting", Cursive; /* Fonte com aparência de assinatura */
+  font-size: 48px;
+  color: #d4af37; /* Cor dourada */
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.assinatura {
+  text-align: center;
+  font-family: "Lucida Handwriting", Cursive;
+  font-size: 48px;
+  color: #d4af37; /* Cor dourada */
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.quadro-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espaçamento entre os quadrados */
+  margin-top: 40px;
+}
+
+.quadro {
+  width: 150px;
+  height: 150px;
+  background-color: #f0f0f0; /* Cor de fundo clara para os quadrados */
+  border: 2px solid #d4af37; /* Borda dourada */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para efeito 3D */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.quadro:hover {
+  transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+.quadro img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; /* As imagens cobrem o espaço sem distorção */
+}
