@@ -111,7 +111,7 @@ header {
 }
 
 .icon {
-  width: 40px; /* Define uma largura padrão para os ícones */
+  width: 35px; /* Define uma largura padrão para os ícones */
   height: 20px; /* Define uma altura padrão para os ícones */
   margin-right: 5px; /* Espaço entre o ícone e o texto */
 }
